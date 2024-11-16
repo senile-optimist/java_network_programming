@@ -1,0 +1,24 @@
+
+Notes on mutithreading in Java:
+
+1. What is the better way of doing multithreading in Java, implementing the Runnable interface or extending the Thread class? 
+Ans: Implementing the Runnable interface is the better method of implementing multithreading in Java because only one class can be extended in Java where as a class can implement multiple interfaces.
+
+
+2. What is the lifecycle of a thread?
+Ans: New --> Runnable --> Running/Waiting --> Dead
+
+3. If we create a class that extends the Thread class and don't override the run method will thecode compile?
+Ans: Yes the code will still compile if we create a class that extends the Thread class but don't override the run method because the Thread class itself implements the Runnable interface and has a run method.
+
+4. What is the difference between the start and run method of the Thread class?
+Ans: Start method creates a new Thread and runs its run method whereas calling run method directly runs the run method of the current thread.
+
+5. What part of the JVM is used to schedule threads on the CPU?
+Ans: Thread Scheduler   
+
+6. What is the point of the sleep method?
+Ans: If for example we have two threads first of which is cpu intensive and the second one which isn't, we can call the sleep method on the second thread to make sure it gets more cpu time compared to the the less cpu intensive thread.
+
+7. When a thread wakes up i.e. the sleep time expires what is the state of the thread at that time?
+Ans: When a thread wakes up froma a sleep state it goes to the RUNNABLE state and soes not automatically start running.
